@@ -5,11 +5,14 @@ import core.player.AbstractPlayer;
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
 
+/**
+ * @author Damien Anderson (Damorin)
+ */
 public class Agent extends AbstractPlayer {
 
-	@Override
-	public ACTIONS act(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
-		return null;
-	}
+    @Override
+    public ACTIONS act(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
+        return null;
+    }
 
 }
