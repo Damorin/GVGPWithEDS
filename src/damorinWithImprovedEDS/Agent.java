@@ -1,4 +1,4 @@
-package damorinEDS;
+package damorinWithImprovedEDS;
 
 import core.game.StateObservation;
 import core.player.AbstractPlayer;
