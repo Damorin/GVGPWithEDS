@@ -1,12 +1,12 @@
-package Damorin.voices.mediumRange;
+package damorin.voices.mediumRange;
 
 import java.util.Random;
 
 import ontology.Types;
 import tools.ElapsedCpuTimer;
 import tools.Utils;
-import Damorin.Agent;
-import Damorin.model.WorldInformation;
+import damorin.Agent;
+import damorin.model.WorldInformation;
 import core.game.StateObservation;
 
 /**
@@ -19,7 +19,7 @@ import core.game.StateObservation;
  * GVG-AI competition team and the enhanced version used for the Shmokin agent
  * from the 2014 competition by Blaine Ross.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class TreeNode implements Node {

@@ -1,4 +1,4 @@
-package Damorin.tests.decisionSystem;
+package damorin.tests.decisionSystem;
 
 import static ontology.Types.ACTIONS.ACTION_NIL;
 import static ontology.Types.ACTIONS.ACTION_UP;
@@ -20,16 +20,16 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import tools.ElapsedCpuTimer;
 import tools.Vector2d;
-import Damorin.Agent;
-import Damorin.decisionSystem.CentralArbitrator;
-import Damorin.decisionSystem.ModularDecisionSystem;
+import damorin.Agent;
+import damorin.decisionSystem.CentralArbitrator;
+import damorin.decisionSystem.ModularDecisionSystem;
 import core.game.Observation;
 import core.game.StateObservation;
 
 /**
  * Tests to ensure that the {@link ModularDecisionSystem} is working correctly.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 @RunWith(PowerMockRunner.class)
@@ -42,7 +42,7 @@ public class ModularDecisionSystemTests {
 
 	@Before
 	public void setUp() {
-		mockStatic(Damorin.Agent.class);
+		mockStatic(damorin.Agent.class);
 		stateObs = mock(StateObservation.class);
 		elapsedTimer = mock(ElapsedCpuTimer.class);
 

@@ -1,4 +1,4 @@
-package Damorin.tests.model;
+package damorin.tests.model;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -9,16 +9,16 @@ import static org.mockito.Mockito.mock;
 import org.junit.Before;
 import org.junit.Test;
 
-import Damorin.model.SpriteInformation;
-import Damorin.model.impl.PositionImpl;
-import Damorin.model.impl.SpriteInformationImpl;
+import damorin.model.SpriteInformation;
+import damorin.model.impl.PositionImpl;
+import damorin.model.impl.SpriteInformationImpl;
 import core.game.Observation;
 
 /**
  * Tests for checking the functionality of the {@link SpriteInformationImpl}
  * class.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class SpriteInformationTests {

@@ -1,12 +1,12 @@
-package Damorin.model.impl;
+package damorin.model.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
-import Damorin.Agent;
-import Damorin.model.WorldInformation;
+import damorin.Agent;
+import damorin.model.WorldInformation;
 import core.game.Observation;
 import core.game.StateObservation;
 
@@ -17,7 +17,7 @@ import core.game.StateObservation;
  * This includes any analysis done by the voices, in order to cut down
  * processing time.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class WorldInformationImpl implements WorldInformation {

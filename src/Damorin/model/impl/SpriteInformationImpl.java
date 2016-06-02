@@ -1,7 +1,7 @@
-package Damorin.model.impl;
+package damorin.model.impl;
 
-import Damorin.model.Position;
-import Damorin.model.SpriteInformation;
+import damorin.model.Position;
+import damorin.model.SpriteInformation;
 import core.game.Observation;
 
 /**
@@ -9,7 +9,7 @@ import core.game.Observation;
  * 
  * Sprites are entities which represents objects and characters in the game.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class SpriteInformationImpl implements SpriteInformation {

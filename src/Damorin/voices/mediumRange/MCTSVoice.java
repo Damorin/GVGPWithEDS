@@ -1,18 +1,18 @@
-package Damorin.voices.mediumRange;
+package damorin.voices.mediumRange;
 
 import java.util.Random;
 
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
-import Damorin.voices.Opinion;
-import Damorin.voices.Voice;
+import damorin.model.WorldInformation;
+import damorin.voices.Opinion;
+import damorin.voices.Voice;
 import core.game.StateObservation;
 
 /**
  * A Voice for mid range decisions. Uses the MCTS algorithm through
  * {@link TreeNode}.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class MCTSVoice implements Voice {

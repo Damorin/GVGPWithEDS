@@ -1,4 +1,4 @@
-package Damorin.tests.voices;
+package damorin.tests.voices;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -6,12 +6,12 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-import Damorin.voices.Opinion;
+import damorin.voices.Opinion;
 
 /**
  * These tests ensure that the {@link Opinion} class is working correctly.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class OpinionTests {

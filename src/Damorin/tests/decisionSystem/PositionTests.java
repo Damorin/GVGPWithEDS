@@ -1,4 +1,4 @@
-package Damorin.tests.decisionSystem;
+package damorin.tests.decisionSystem;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -7,13 +7,13 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-import Damorin.model.Position;
-import Damorin.model.impl.PositionImpl;
+import damorin.model.Position;
+import damorin.model.impl.PositionImpl;
 
 /**
  * Tests to ensure that the {@link Position} class is functioning correctly.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class PositionTests {

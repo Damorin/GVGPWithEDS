@@ -1,12 +1,12 @@
-package Damorin.voices.mediumRange;
+package damorin.voices.mediumRange;
 
 import java.util.Random;
 
 import ontology.Types;
 import tools.ElapsedCpuTimer;
 import tools.Utils;
-import Damorin.Agent;
-import Damorin.model.WorldInformation;
+import damorin.Agent;
+import damorin.model.WorldInformation;
 import core.game.StateObservation;
 
 /**
@@ -16,7 +16,7 @@ import core.game.StateObservation;
  * This version is based heavily upon the SampleOLMCTS agent provided by the GVG
  * Framework.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class OpenLoopTreeNode implements Node {

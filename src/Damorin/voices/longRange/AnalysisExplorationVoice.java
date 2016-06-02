@@ -1,4 +1,4 @@
-package Damorin.voices.longRange;
+package damorin.voices.longRange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,13 +6,13 @@ import java.util.List;
 import ontology.Types;
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
-import Damorin.Agent;
-import Damorin.model.SpriteInformation;
-import Damorin.model.WorldInformation;
-import Damorin.model.impl.PositionImpl;
-import Damorin.model.impl.SpriteInformationImpl;
-import Damorin.voices.Opinion;
-import Damorin.voices.Voice;
+import damorin.Agent;
+import damorin.model.SpriteInformation;
+import damorin.model.WorldInformation;
+import damorin.model.impl.PositionImpl;
+import damorin.model.impl.SpriteInformationImpl;
+import damorin.voices.Opinion;
+import damorin.voices.Voice;
 import core.game.Observation;
 import core.game.StateObservation;
 
@@ -24,7 +24,7 @@ import core.game.StateObservation;
  * if it would earn points, this is selected as a goal. Once the goal has been
  * reached a new goal is selected.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class AnalysisExplorationVoice implements Voice {

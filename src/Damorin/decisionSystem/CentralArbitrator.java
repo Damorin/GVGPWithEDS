@@ -1,14 +1,14 @@
-package Damorin.decisionSystem;
+package damorin.decisionSystem;
 
 import tools.ElapsedCpuTimer;
-import Damorin.voices.Voice;
+import damorin.voices.Voice;
 import core.game.StateObservation;
 
 /**
  * A system which can be used to decide an action for the agent. This may use a
  * variety of different implementations.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public interface CentralArbitrator {

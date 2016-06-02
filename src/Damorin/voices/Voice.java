@@ -1,13 +1,13 @@
-package Damorin.voices;
+package damorin.voices;
 
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
+import damorin.model.WorldInformation;
 import core.game.StateObservation;
 
 /**
  * An interface for defining the various Voice implementations.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public interface Voice {

@@ -6,7 +6,7 @@ import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
 
 /**
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  */
 public class Agent extends AbstractPlayer {
 

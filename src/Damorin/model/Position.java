@@ -1,4 +1,4 @@
-package Damorin.model;
+package damorin.model;
 
 import core.game.Observation;
 import core.game.StateObservation;
@@ -7,7 +7,7 @@ import core.game.StateObservation;
  * Represents a set of coordinates in the Observation Grid provided by the
  * {@link StateObservation}. A map of the game world.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public interface Position {

@@ -1,19 +1,19 @@
-package Damorin.voices.shortRange;
+package damorin.voices.shortRange;
 
 import java.util.List;
 
 import ontology.Types;
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
-import Damorin.voices.Opinion;
-import Damorin.voices.Voice;
+import damorin.model.WorldInformation;
+import damorin.voices.Opinion;
+import damorin.voices.Voice;
 import core.game.StateObservation;
 
 /**
  * A Short range {@link Voice} which is designed with extremely accurate close
  * range sight for quick survival actions.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class SurvivalVoice implements Voice {

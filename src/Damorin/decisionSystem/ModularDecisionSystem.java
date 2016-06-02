@@ -1,16 +1,16 @@
-package Damorin.decisionSystem;
+package damorin.decisionSystem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
-import Damorin.model.impl.WorldInformationImpl;
-import Damorin.voices.Opinion;
-import Damorin.voices.Voice;
-import Damorin.voices.longRange.AnalysisExplorationVoice;
-import Damorin.voices.mediumRange.MCTSVoice;
-import Damorin.voices.shortRange.SurvivalVoice;
+import damorin.model.WorldInformation;
+import damorin.model.impl.WorldInformationImpl;
+import damorin.voices.Opinion;
+import damorin.voices.Voice;
+import damorin.voices.longRange.AnalysisExplorationVoice;
+import damorin.voices.mediumRange.MCTSVoice;
+import damorin.voices.shortRange.SurvivalVoice;
 import core.game.StateObservation;
 
 /**
@@ -21,7 +21,7 @@ import core.game.StateObservation;
  * Voices are treated without any particular priority, their {@link Opinion}s
  * are trusted.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class ModularDecisionSystem implements CentralArbitrator {

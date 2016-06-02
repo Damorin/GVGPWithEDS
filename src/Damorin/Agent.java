@@ -1,12 +1,12 @@
-package Damorin;
+package damorin;
 
 import java.util.List;
 
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
-import Damorin.decisionSystem.CentralArbitrator;
-import Damorin.decisionSystem.InformedDecisionSystem;
-import Damorin.model.impl.PositionImpl;
+import damorin.decisionSystem.CentralArbitrator;
+import damorin.decisionSystem.InformedDecisionSystem;
+import damorin.model.impl.PositionImpl;
 import core.game.Game;
 import core.game.StateObservation;
 import core.player.AbstractPlayer;
@@ -17,7 +17,7 @@ import core.player.AbstractPlayer;
  * The goal for this agent is to use a variety of algorithms as part of an
  * Ensemble Decision System.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class Agent extends AbstractPlayer {

@@ -1,11 +1,11 @@
-package Damorin.model.impl;
+package damorin.model.impl;
 
-import Damorin.model.Position;
+import damorin.model.Position;
 
 /**
  * Provides an X and Y Coordinate for a sprite in the game world.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class PositionImpl implements Position {

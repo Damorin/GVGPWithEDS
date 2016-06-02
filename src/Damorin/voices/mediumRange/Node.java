@@ -1,14 +1,14 @@
-package Damorin.voices.mediumRange;
+package damorin.voices.mediumRange;
 
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
+import damorin.model.WorldInformation;
 import core.game.StateObservation;
 
 /**
  * An interface for mid-range searchs. Used by {@link MCTSVoice} and
  * {@link OpenLoopMCTSVoice}.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public interface Node {

@@ -1,4 +1,4 @@
-package Damorin.voices.longRange;
+package damorin.voices.longRange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import ontology.Types;
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
 import tools.Vector2d;
-import Damorin.Agent;
-import Damorin.model.WorldInformation;
-import Damorin.voices.Opinion;
-import Damorin.voices.Voice;
+import damorin.Agent;
+import damorin.model.WorldInformation;
+import damorin.voices.Opinion;
+import damorin.voices.Voice;
 import core.game.Observation;
 import core.game.StateObservation;
 
@@ -19,7 +19,7 @@ import core.game.StateObservation;
  * {@link Voice} simulates the path with a simplified map and does not take
  * evaluations or enemies into account.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class SimulatedExplorationVoice implements Voice {

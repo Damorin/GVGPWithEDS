@@ -1,16 +1,16 @@
-package Damorin.model;
+package damorin.model;
 
 import java.util.List;
 
 import ontology.Types.ACTIONS;
-import Damorin.Agent;
+import damorin.Agent;
 import core.game.Observation;
 import core.game.StateObservation;
 
 /**
  * Used to store and analyse data about the game world.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public interface WorldInformation {

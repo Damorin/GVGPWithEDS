@@ -1,4 +1,4 @@
-package Damorin.tests.model;
+package damorin.tests.model;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -9,8 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
-import Damorin.model.impl.WorldInformationImpl;
+import damorin.model.WorldInformation;
+import damorin.model.impl.WorldInformationImpl;
 import core.game.Observation;
 import core.game.StateObservation;
 
@@ -18,7 +18,7 @@ import core.game.StateObservation;
  * Tests to ensure that the functionality of the {@link WorldInformation} class
  * is correct.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class WorldInformationTests {

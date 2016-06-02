@@ -1,13 +1,13 @@
-package Damorin.decisionSystem;
+package damorin.decisionSystem;
 
 import tools.ElapsedCpuTimer;
-import Damorin.model.WorldInformation;
-import Damorin.model.impl.WorldInformationImpl;
-import Damorin.voices.Opinion;
-import Damorin.voices.Voice;
-import Damorin.voices.longRange.SimulatedExplorationVoice;
-import Damorin.voices.mediumRange.OpenLoopMCTSVoice;
-import Damorin.voices.shortRange.SurvivalVoice;
+import damorin.model.WorldInformation;
+import damorin.model.impl.WorldInformationImpl;
+import damorin.voices.Opinion;
+import damorin.voices.Voice;
+import damorin.voices.longRange.SimulatedExplorationVoice;
+import damorin.voices.mediumRange.OpenLoopMCTSVoice;
+import damorin.voices.shortRange.SurvivalVoice;
 import core.game.StateObservation;
 
 /**
@@ -17,7 +17,7 @@ import core.game.StateObservation;
  * In this {@link CentralArbitrator} the {@link Opinion}s are not always trusted,
  * and some higher priority takes place when deciding on actions.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class InformedDecisionSystem implements CentralArbitrator {

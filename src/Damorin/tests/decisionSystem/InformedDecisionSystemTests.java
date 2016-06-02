@@ -1,4 +1,4 @@
-package Damorin.tests.decisionSystem;
+package damorin.tests.decisionSystem;
 
 import static ontology.Types.ACTIONS.ACTION_NIL;
 import static ontology.Types.ACTIONS.ACTION_UP;
@@ -19,9 +19,9 @@ import org.junit.Test;
 
 import tools.ElapsedCpuTimer;
 import tools.Vector2d;
-import Damorin.Agent;
-import Damorin.decisionSystem.CentralArbitrator;
-import Damorin.decisionSystem.InformedDecisionSystem;
+import damorin.Agent;
+import damorin.decisionSystem.CentralArbitrator;
+import damorin.decisionSystem.InformedDecisionSystem;
 import core.game.Observation;
 import core.game.StateObservation;
 
@@ -29,7 +29,7 @@ import core.game.StateObservation;
  * The tests to ensure that the {@link InformedDecisionSystem} is functioning
  * correctly.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class InformedDecisionSystemTests {
@@ -67,7 +67,7 @@ public class InformedDecisionSystemTests {
 	}
 
 	private void initialiseMocks() {
-		mockStatic(Damorin.Agent.class);
+		mockStatic(damorin.Agent.class);
 		stateObs = mock(StateObservation.class);
 		badState = mock(StateObservation.class);
 		goodState = mock(StateObservation.class);

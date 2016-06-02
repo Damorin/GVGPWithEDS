@@ -1,11 +1,11 @@
-package Damorin.model;
+package damorin.model;
 
 import core.game.Observation;
 
 /**
  * Stores information regarding a sprite in the game world.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public interface SpriteInformation {

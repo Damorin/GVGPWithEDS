@@ -1,10 +1,10 @@
-package Damorin.voices;
+package damorin.voices;
 
 /**
  * Represents what a {@link Voice} is saying. The action and how urgent the
  * action is are represented here.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 public class Opinion {

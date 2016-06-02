@@ -1,4 +1,4 @@
-package Damorin.tests;
+package damorin.tests;
 
 import static ontology.Types.ACTIONS.ACTION_NIL;
 import static org.hamcrest.CoreMatchers.is;
@@ -21,14 +21,14 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import tools.ElapsedCpuTimer;
 import tools.Vector2d;
-import Damorin.Agent;
+import damorin.Agent;
 import core.game.Observation;
 import core.game.StateObservation;
 
 /**
  * A Test suite for ensuring that the {@link Agent} performs as expected.
  * 
- * @author Damien Anderson (Damorin)
+ * @author Damien Anderson (damorin)
  *
  */
 @RunWith(PowerMockRunner.class)

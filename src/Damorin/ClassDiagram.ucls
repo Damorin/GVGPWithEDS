@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="JPEG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
-  <interface id="1" language="java" name="Damorin.model.WorldInformation" project="Solusar" 
-    file="/Solusar/src/Damorin/model/WorldInformation.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="1" language="java" name="damorin.model.WorldInformation" project="Solusar"
+    file="/Solusar/src/damorin/model/WorldInformation.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="459" y="502"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="Damorin.voices.longRange.SimulatedExplorationVoice" project="Solusar" 
-    file="/Solusar/src/Damorin/voices/longRange/SimulatedExplorationVoice.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="damorin.voices.longRange.SimulatedExplorationVoice" project="Solusar"
+    file="/Solusar/src/damorin/voices/longRange/SimulatedExplorationVoice.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="948" y="132"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="Damorin.Agent" project="Solusar" file="/Solusar/src/Damorin/Agent.java" 
+  <class id="3" language="java" name="damorin.Agent" project="Solusar" file="/Solusar/src/damorin/Agent.java"
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1239" y="588"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="4" language="java" name="Damorin.decisionSystem.CentralArbitrator" project="Solusar" 
-    file="/Solusar/src/Damorin/decisionSystem/CentralArbitrator.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="4" language="java" name="damorin.decisionSystem.CentralArbitrator" project="Solusar"
+    file="/Solusar/src/damorin/decisionSystem/CentralArbitrator.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1542" y="439"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="5" language="java" name="Damorin.voices.shortRange.SurvivalVoice" project="Solusar" 
-    file="/Solusar/src/Damorin/voices/shortRange/SurvivalVoice.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="damorin.voices.shortRange.SurvivalVoice" project="Solusar"
+    file="/Solusar/src/damorin/voices/shortRange/SurvivalVoice.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="570" y="114"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="Damorin.voices.Voice" project="Solusar" 
-    file="/Solusar/src/Damorin/voices/Voice.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="6" language="java" name="damorin.voices.Voice" project="Solusar"
+    file="/Solusar/src/damorin/voices/Voice.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1199" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="Damorin.decisionSystem.InformedDecisionSystem" project="Solusar" 
-    file="/Solusar/src/Damorin/decisionSystem/InformedDecisionSystem.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="damorin.decisionSystem.InformedDecisionSystem" project="Solusar"
+    file="/Solusar/src/damorin/decisionSystem/InformedDecisionSystem.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1330" y="244"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="Damorin.voices.mediumRange.OpenLoopMCTSVoice" project="Solusar" 
-    file="/Solusar/src/Damorin/voices/mediumRange/OpenLoopMCTSVoice.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="damorin.voices.mediumRange.OpenLoopMCTSVoice" project="Solusar"
+    file="/Solusar/src/damorin/voices/mediumRange/OpenLoopMCTSVoice.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="866" y="525"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="Damorin.voices.mediumRange.OpenLoopTreeNode" project="Solusar" 
-    file="/Solusar/src/Damorin/voices/mediumRange/OpenLoopTreeNode.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="damorin.voices.mediumRange.OpenLoopTreeNode" project="Solusar"
+    file="/Solusar/src/damorin/voices/mediumRange/OpenLoopTreeNode.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="153" y="168"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="Damorin.model.impl.WorldInformationImpl" project="Solusar" 
-    file="/Solusar/src/Damorin/model/impl/WorldInformationImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="damorin.model.impl.WorldInformationImpl" project="Solusar"
+    file="/Solusar/src/damorin/model/impl/WorldInformationImpl.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="160" y="497"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
