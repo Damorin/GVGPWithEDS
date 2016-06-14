@@ -56,5 +56,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="javadoc" level="project" />
+    <orderEntry type="library" name="deeplearning4j-core-0.4-rc3.10" level="project" />
   </component>
 </module>

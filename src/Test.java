@@ -24,6 +24,7 @@ public class Test
         String sampleGAController = "controllers.singlePlayer.sampleGA.Agent";
         String repeatOLETS = "controllers.singlePlayer.repeatOLETS.Agent";
         String damorinDM = "damorinDM.Agent";
+        String damorinNN = "damorinNN.Agent";
 
         //Available Generators
         String randomLevelGenerator = "levelGenerators.randomLevelGenerator.LevelGenerator";
@@ -57,7 +58,7 @@ public class Test
         int seed = new Random().nextInt();
 
         //Game and level to play
-        int gameIdx = 4;
+        int gameIdx = 0;
         int levelIdx = 0; //level names from 0 to 4 (game_lvlN.txt).
         String game = gamesPath + games[gameIdx] + ".txt";
         String level1 = gamesPath + games[gameIdx] + "_lvl" + levelIdx +".txt";
@@ -69,20 +70,20 @@ public class Test
 //        ArcadeMachine.playOneGame(game, level1, recordActionsFile, seed);
         
         // 2. This plays a game in a level by the controller.
-        ArcadeMachine.runOneGame(game, level1, visuals, damorinDM, recordActionsFile, seed, 0);
+//        ArcadeMachine.runOneGame(game, level1, visuals, damorinDM, recordActionsFile, seed, 0);
 
         // 3. This replays a game from an action file previously recorded
         //String readActionsFile = recordActionsFile;
         //ArcadeMachine.replayGame(game, level1, visuals, readActionsFile);
 
         // 4. This plays a single game, in N levels, M times :
-//        String level2 = gamesPath + games[gameIdx] + "_lvl" + 1 +".txt";
-//        int M = 10;
-//        for(int i=0; i<games.length; i++){
-//        	game = gamesPath + games[i] + ".txt";
-//        	level1 = gamesPath + games[i] + "_lvl" + levelIdx +".txt";
-//        	ArcadeMachine.runGames(game, new String[]{level1}, M, sampleMCTSController, null);
-//        }
+        String level2 = gamesPath + games[gameIdx] + "_lvl" + 1 +".txt";
+        int M = 10000;
+        for(int i=0; i<1; i++){
+        	game = gamesPath + games[i] + ".txt";
+        	level1 = gamesPath + games[i] + "_lvl" + levelIdx +".txt";
+        	ArcadeMachine.runGames(game, new String[]{level1}, M, damorinNN, null);
+        }
         
         //5. This starts a game, in a generated level created by a specific level generator
 

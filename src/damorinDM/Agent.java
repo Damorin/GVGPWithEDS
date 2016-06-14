@@ -1,12 +1,10 @@
 package damorinDM;
 
-import core.game.Observation;
 import core.game.StateObservation;
 import core.player.AbstractPlayer;
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
 
-import java.util.List;
 
 /**
  * Basis for attempts to develop an agent for the GVGAI competition using some of the techniques
@@ -16,16 +14,15 @@ import java.util.List;
  */
 public class Agent extends AbstractPlayer {
 
-    private NeuralNetwork network;
+    private DeepQNetwork dqn;
 
     public Agent(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
-        network = new NeuralNetwork();
+        dqn = new DeepQNetwork();
     }
 
     @Override
     public ACTIONS act(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
-
-        return network.computeAction(stateObs, elapsedTimer);
+        return null;
     }
 
 }
