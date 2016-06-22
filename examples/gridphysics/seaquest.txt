@@ -26,7 +26,7 @@ BasicGame
         avatar TIME > subtractHealthPoints timer=26 repeating=True
 
         EOS avatar diver sky   > stepBack
-        fish EOS  > killSprite #Note that from vgdl 2.0, EOS can be the first or the second sprite.
+        fish EOS  > killSprite #Note that from vgdl 2.0, EOS can be the from or the to sprite.
 
         fish torpedo > killBoth scoreChange=1
         avatar fish  > killSprite

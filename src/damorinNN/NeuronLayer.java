@@ -2,6 +2,7 @@ package damorinNN;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Add a description of the class here.
@@ -13,7 +14,26 @@ public class NeuronLayer {
 
     private List<Neuron> neurons;
 
-    public NeuronLayer(int numOfNeurons) {
+    public NeuronLayer(int numOfNeurons, Random rng, NeuronLayer prevLayer, Neuron bias) {
         neurons = new ArrayList<>(numOfNeurons);
+        if (prevLayer != null) {
+            for (int i = 0; i < numOfNeurons; i++) {
+                Neuron neuron = new Neuron(rng);
+                neuron.addInConnection(prevLayer.neurons);
+                neuron.addBiasConnection(bias);
+                neurons.add(neuron);
+            }
+        }
+        else {
+            for (int i = 0; i < numOfNeurons; i++) {
+                Neuron neuron = new Neuron(rng);
+                neurons.add(neuron);
+            }
+        }
     }
+
+    public int size() {
+        return neurons.size();
+    }
+
 }

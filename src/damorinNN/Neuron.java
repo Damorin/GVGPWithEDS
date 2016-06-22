@@ -12,25 +12,29 @@ import java.util.Random;
  */
 public class Neuron {
 
-    private List<Double> inputs;
-    private List<Double> weights;
-    private Random rng;
+    private NeuronConnection biasConnection;
 
-    public Neuron(int numOfInputs) {
-        inputs = new ArrayList<>(numOfInputs + 1);
-        weights = new ArrayList<>(numOfInputs + 1);
-        rng = new Random();
+    private List<NeuronConnection> inputConnections;
 
-        for (int i = 0; i <= numOfInputs; i++) {
-            weights.add(rng.nextDouble() * 2 - 1);
-        }
+    public Neuron(Random rng) {
+        biasConnection = new NeuronConnection(new Neuron(rng), this, rng);
+        inputConnections = new ArrayList<>();
     }
 
-    private void activation() {
+    public Double activation() {
         Double total = 0.0;
-        for (int index = 0; index < inputs.size(); index++) {
-            total += inputs.get(index) * weights.get(index);
-        }
+//        for (int index = 0; index < inputs.size(); index++) {
+//            total += inputs.get(index). * weights.get(index);
+//        }
+        return total;
+    }
+
+    public void addInConnection(List<Neuron> inputs) {
+
+    }
+
+    public void addBiasConnection(Neuron bias) {
+
     }
 
 }

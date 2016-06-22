@@ -5,6 +5,8 @@ import core.player.AbstractPlayer;
 import ontology.Types.ACTIONS;
 import tools.ElapsedCpuTimer;
 
+import java.util.Random;
+
 /**
  * Put a description of the purpose of this file here.
  *
@@ -13,9 +15,10 @@ import tools.ElapsedCpuTimer;
  */
 public class Agent extends AbstractPlayer {
 
+    private NeuralNetwork nn;
 
     public Agent(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
-
+        nn = new NeuralNetwork(2, 5, stateObs.getAvailableActions().size(), new Random());
     }
 
     @Override
