@@ -1,6 +1,7 @@
 package damorinNN;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -18,7 +19,7 @@ public class NeuralNetwork {
     private Neuron bias;
 
     public NeuralNetwork(int numOfHiddenLayers, int neuronsPerHiddenLayer, int numOfActions, Random rng) {
-        inputLayer = new NeuronLayer(numOfActions, rng, null, null);
+        inputLayer = new NeuronLayer(numOfActions, rng);
         bias = new Neuron(rng);
         hiddenLayers = new ArrayList<>();
         for (int i = 0; i < numOfHiddenLayers; i++) {
@@ -30,7 +31,11 @@ public class NeuralNetwork {
         outputLayer = new NeuronLayer(numOfActions, rng, hiddenLayers.get(hiddenLayers.size()-1), bias);
     }
 
-    public List<Double> update(List<Double> inputs) {
+    public List<Double> run(List<Double> inputs) {
+        return Collections.EMPTY_LIST;
+    }
+
+    private List<Double> update(List<Double> inputs) {
         return null;
     }
 

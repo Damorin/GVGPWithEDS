@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Add a description of the class here.
+ * Represents an individual Neuron in the neural network.
  *
  * @author Damien Anderson (Damorin)
  *         16/06/2016
@@ -16,25 +16,36 @@ public class Neuron {
 
     private List<NeuronConnection> inputConnections;
 
+    private Random rng;
+
     public Neuron(Random rng) {
         biasConnection = new NeuronConnection(new Neuron(rng), this, rng);
         inputConnections = new ArrayList<>();
+
+        this.rng = rng;
     }
 
     public Double activation() {
         Double total = 0.0;
-//        for (int index = 0; index < inputs.size(); index++) {
-//            total += inputs.get(index). * weights.get(index);
-//        }
+        for (int i = 0; i < inputConnections.size(); i++) {
+            total += inputConnections.get(i).getFromNeuron().activation() * inputConnections.get(i).getWeight();
+        }
+        // Add RELU method to the returned total
         return total;
     }
 
-    public void addInConnection(List<Neuron> inputs) {
+    public void addInConnections(List<Neuron> inputs) {
+        for (Neuron input : inputs) {
+            inputConnections.add(new NeuronConnection(input, this, rng));
+        }
+    }
 
+    public void addInConnection(Neuron input) {
+        inputConnections.add(new NeuronConnection(input, this, rng));
     }
 
     public void addBiasConnection(Neuron bias) {
-
+        biasConnection = new NeuronConnection(bias, this, rng, true);
     }
 
 }

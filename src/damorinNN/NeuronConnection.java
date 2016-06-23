@@ -18,10 +18,18 @@ public class NeuronConnection {
     private Neuron to;
 
     public NeuronConnection(Neuron from, Neuron to, Random rng) {
+        this(from, to, rng, false);
+    }
+
+    public NeuronConnection(Neuron from, Neuron to, Random rng, boolean isBias) {
         this.from = from;
         this.to = to;
 
-        weight = rng.nextDouble() * 2 - 1;
+        if (!isBias) {
+            weight = rng.nextDouble() * 2 - 1;
+        } else {
+            weight = -1.0;
+        }
     }
 
     public Double getWeight() {
