@@ -1,7 +1,6 @@
 package damorinNN;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -23,16 +22,21 @@ public class NeuralNetwork {
         bias = new Neuron(rng);
         hiddenLayers = new ArrayList<>();
         for (int i = 0; i < numOfHiddenLayers; i++) {
-            if (i > 0) {
+            if (i == 0) {
                 hiddenLayers.add(new NeuronLayer(neuronsPerHiddenLayer, rng, inputLayer, bias));
+            } else {
+                hiddenLayers.add(new NeuronLayer(neuronsPerHiddenLayer, rng, hiddenLayers.get(i - 1), bias));
             }
-            hiddenLayers.add(new NeuronLayer(neuronsPerHiddenLayer, rng, hiddenLayers.get(i-1), bias));
         }
-        outputLayer = new NeuronLayer(numOfActions, rng, hiddenLayers.get(hiddenLayers.size()-1), bias);
+        outputLayer = new NeuronLayer(numOfActions, rng, hiddenLayers.get(hiddenLayers.size() - 1), bias);
     }
 
     public List<Double> run(List<Double> inputs) {
-        return Collections.EMPTY_LIST;
+        List<Double> outputs = inputLayer.run(inputs);
+        for (int i = 0; i < hiddenLayers.size(); i++) {
+            outputs = hiddenLayers.get(i).run(outputs);
+        }
+        return outputLayer.run(outputs);
     }
 
     private List<Double> update(List<Double> inputs) {

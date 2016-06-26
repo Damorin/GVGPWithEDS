@@ -15,7 +15,7 @@ public class NeuronLayer {
     private List<Neuron> neurons;
 
     public NeuronLayer(int numOfNeurons, Random rng) {
-        this(numOfNeurons,rng, null, null);
+        this(numOfNeurons, rng, null, null);
     }
 
     public NeuronLayer(int numOfNeurons, Random rng, NeuronLayer prevLayer, Neuron bias) {
@@ -27,8 +27,7 @@ public class NeuronLayer {
                 neuron.addBiasConnection(bias);
                 neurons.add(neuron);
             }
-        }
-        else {
+        } else {
             for (int i = 0; i < numOfNeurons; i++) {
                 Neuron neuron = new Neuron(rng);
                 neurons.add(neuron);
@@ -40,4 +39,11 @@ public class NeuronLayer {
         return neurons.size();
     }
 
+    public List<Double> run(List<Double> inputs) {
+        List<Double> outputs = new ArrayList<>();
+        for (int i = 0; i < inputs.size(); i++) {
+            outputs.add(neurons.get(i).activation(inputs));
+        }
+        return outputs;
+    }
 }

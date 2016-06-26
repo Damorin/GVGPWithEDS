@@ -19,16 +19,14 @@ public class Neuron {
     private Random rng;
 
     public Neuron(Random rng) {
-        biasConnection = new NeuronConnection(new Neuron(rng), this, rng);
         inputConnections = new ArrayList<>();
-
         this.rng = rng;
     }
 
-    public Double activation() {
+    public Double activation(List<Double> inputs) {
         Double total = 0.0;
         for (int i = 0; i < inputConnections.size(); i++) {
-            total += inputConnections.get(i).getFromNeuron().activation() * inputConnections.get(i).getWeight();
+            total += inputs.get(i) * inputConnections.get(i).getWeight();
         }
         // Add RELU method to the returned total
         return total;
