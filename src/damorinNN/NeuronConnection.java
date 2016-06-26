@@ -12,10 +12,13 @@ import java.util.Random;
 public class NeuronConnection {
 
     private Double weight;
+    private Double mutationRate;
 
     private Neuron from;
 
     private Neuron to;
+
+    private Random rng;
 
     public NeuronConnection(Neuron from, Neuron to, Random rng) {
         this(from, to, rng, false);
@@ -24,6 +27,8 @@ public class NeuronConnection {
     public NeuronConnection(Neuron from, Neuron to, Random rng, boolean isBias) {
         this.from = from;
         this.to = to;
+        this.rng = rng;
+        mutationRate = 0.001;
 
         if (!isBias) {
             weight = rng.nextDouble() * 2 - 1;
@@ -46,5 +51,12 @@ public class NeuronConnection {
 
     public Neuron getToNeuron() {
         return to;
+    }
+
+    public void mutateWeight() {
+        if (rng.nextDouble() <= mutationRate) {
+            System.out.println("Mutation");
+            weight += -0.2 + (0.2 - -0.2) * rng.nextDouble();
+        }
     }
 }

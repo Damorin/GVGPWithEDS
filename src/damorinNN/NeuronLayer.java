@@ -1,6 +1,7 @@
 package damorinNN;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -42,8 +43,22 @@ public class NeuronLayer {
     public List<Double> run(List<Double> inputs) {
         List<Double> outputs = new ArrayList<>();
         for (int i = 0; i < inputs.size(); i++) {
-            outputs.add(neurons.get(i).activation(inputs));
+            outputs.add(neurons.get(i).activation(inputs, i));
         }
         return outputs;
+    }
+
+    public List<Double> getWeights() {
+        List<Double> toReturn = new ArrayList<>();
+        for(Neuron neuron : neurons) {
+            toReturn.addAll(neuron.getWeights());
+        }
+        return toReturn;
+    }
+
+    public void mutateWeights() {
+        for(Neuron neuron : neurons) {
+            neuron.mutateWeights();
+        }
     }
 }

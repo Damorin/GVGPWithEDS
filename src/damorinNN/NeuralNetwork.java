@@ -39,8 +39,21 @@ public class NeuralNetwork {
         return outputLayer.run(outputs);
     }
 
-    private List<Double> update(List<Double> inputs) {
-        return null;
+    public void mutateWeights() {
+
+        for(NeuronLayer layer : hiddenLayers) {
+            layer.mutateWeights();
+        }
+        outputLayer.mutateWeights();
+
     }
 
+    public List<Double> getWeights() {
+        List<Double> toReturn = new ArrayList<>();
+        for(NeuronLayer layer : hiddenLayers) {
+            toReturn.addAll(layer.getWeights());
+        }
+        toReturn.addAll(outputLayer.getWeights());
+        return toReturn;
+    }
 }

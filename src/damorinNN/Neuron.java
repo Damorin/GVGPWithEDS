@@ -23,9 +23,12 @@ public class Neuron {
         this.rng = rng;
     }
 
-    public Double activation(List<Double> inputs) {
+    public Double activation(List<Double> inputs, int neuronIndex) {
         Double total = 0.0;
-        for (int i = 0; i < inputConnections.size(); i++) {
+        if (inputConnections.isEmpty()) {
+            return inputs.get(neuronIndex);
+        }
+        for (int i = 0; i < inputs.size(); i++) {
             total += inputs.get(i) * inputConnections.get(i).getWeight();
         }
         // Add RELU method to the returned total
@@ -46,4 +49,17 @@ public class Neuron {
         biasConnection = new NeuronConnection(bias, this, rng, true);
     }
 
+    public List<Double> getWeights() {
+        List<Double> toReturn = new ArrayList<>();
+        for(NeuronConnection connection : inputConnections) {
+            toReturn.add(connection.getWeight());
+        }
+        return toReturn;
+    }
+
+    public void mutateWeights() {
+        for(NeuronConnection connection : inputConnections) {
+            connection.mutateWeight();
+        }
+    }
 }

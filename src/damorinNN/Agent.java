@@ -18,10 +18,19 @@ import java.util.Random;
 public class Agent extends AbstractPlayer {
 
     private NeuralNetwork nn;
-    private NeuralNetwork copy;
+    private List<Double> lastChromosome;
+    private Double lastScore;
+
+    private int noOfHiddenLayers;
+    private int neuronsPerLayer;
 
     public Agent(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
-        nn = new NeuralNetwork(2, 5, stateObs.getAvailableActions().size(), new Random());
+        noOfHiddenLayers = 2;
+        neuronsPerLayer = 5;
+        lastScore = Double.MIN_VALUE;
+        nn = new NeuralNetwork(noOfHiddenLayers, neuronsPerLayer, stateObs.getAvailableActions().size(), new Random());
+        lastChromosome = new ArrayList<>();
+        lastChromosome.addAll(nn.getWeights());
     }
 
     @Override
@@ -32,6 +41,35 @@ public class Agent extends AbstractPlayer {
         inputs.add(stateObs.getAvatarPosition().y);
 
         List<Double> outputs = nn.run(inputs);
-        return null;
+
+        StateObservation copy = stateObs.copy();
+
+        int bestAction = -1;
+        double bestScore = Double.MIN_VALUE;
+        for (int i = 0; i < outputs.size(); i++) {
+            if (outputs.get(i) > bestScore) {
+                bestAction = i;
+                bestScore = outputs.get(i);
+            }
+        }
+
+        if (bestAction == -1) {
+            bestAction = (int) (Math.random() * stateObs.getAvailableActions().size());
+        }
+
+        copy.advance(stateObs.getAvailableActions().get(bestAction));
+
+        if (copy.isGameOver())  {
+            if (copy.getGameScore() > lastScore) {
+                lastScore = copy.getGameScore();
+                lastChromosome.clear();
+                lastChromosome.addAll(nn.getWeights());
+                nn.mutateWeights();
+                System.out.println("Improvement, new network in trial");
+            }
+            nn.mutateWeights();
+        }
+
+        return stateObs.getAvailableActions().get(bestAction);
     }
 }
