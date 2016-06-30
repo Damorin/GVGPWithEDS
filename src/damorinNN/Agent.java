@@ -66,8 +66,9 @@ public class Agent extends AbstractPlayer {
                 lastChromosome.addAll(nn.getWeights());
                 nn.mutateWeights();
                 System.out.println("Improvement, new network in trial");
+            } else {
+                nn.mutateWeights();
             }
-            nn.mutateWeights();
         }
 
         return stateObs.getAvailableActions().get(bestAction);
