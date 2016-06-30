@@ -62,4 +62,10 @@ public class Neuron {
             connection.mutateWeight();
         }
     }
+
+    public void revertWeight() {
+        for (NeuronConnection connection : inputConnections) {
+            connection.revertWeight();
+        }
+    }
 }

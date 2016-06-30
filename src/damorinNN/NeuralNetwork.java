@@ -56,4 +56,12 @@ public class NeuralNetwork {
         toReturn.addAll(outputLayer.getWeights());
         return toReturn;
     }
+
+    public void revertWeights() {
+        for (NeuronLayer layer : hiddenLayers) {
+            layer.revertWeights();
+        }
+
+        outputLayer.revertWeights();
+    }
 }

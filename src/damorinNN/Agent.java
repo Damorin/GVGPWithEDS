@@ -17,20 +17,21 @@ import java.util.Random;
  */
 public class Agent extends AbstractPlayer {
 
-    private NeuralNetwork nn;
-    private List<Double> lastChromosome;
-    private Double lastScore;
+    private NeuralNetwork currentNN;
+    private NeuralNetwork bestNN;
+    private List<Double> lastChromosome; // Get rid of
+    private Double bestNNScore;
 
     private int noOfHiddenLayers;
     private int neuronsPerLayer;
 
     public Agent(StateObservation stateObs, ElapsedCpuTimer elapsedTimer) {
-        noOfHiddenLayers = 2;
+        noOfHiddenLayers = 3;
         neuronsPerLayer = 5;
-        lastScore = Double.MIN_VALUE;
-        nn = new NeuralNetwork(noOfHiddenLayers, neuronsPerLayer, stateObs.getAvailableActions().size(), new Random());
+        bestNNScore = Double.MIN_VALUE;
+        currentNN = new NeuralNetwork(noOfHiddenLayers, neuronsPerLayer, stateObs.getAvailableActions().size(), new Random());
         lastChromosome = new ArrayList<>();
-        lastChromosome.addAll(nn.getWeights());
+        lastChromosome.addAll(currentNN.getWeights());
     }
 
     @Override
@@ -40,12 +41,10 @@ public class Agent extends AbstractPlayer {
         inputs.add(stateObs.getAvatarPosition().x);
         inputs.add(stateObs.getAvatarPosition().y);
 
-        List<Double> outputs = nn.run(inputs);
-
-        StateObservation copy = stateObs.copy();
+        List<Double> outputs = currentNN.run(inputs);
 
         int bestAction = -1;
-        double bestScore = Double.MIN_VALUE;
+        double bestScore = -Double.MAX_VALUE;
         for (int i = 0; i < outputs.size(); i++) {
             if (outputs.get(i) > bestScore) {
                 bestAction = i;
@@ -57,17 +56,19 @@ public class Agent extends AbstractPlayer {
             bestAction = (int) (Math.random() * stateObs.getAvailableActions().size());
         }
 
+        StateObservation copy = stateObs.copy();
         copy.advance(stateObs.getAvailableActions().get(bestAction));
 
         if (copy.isGameOver())  {
-            if (copy.getGameScore() > lastScore) {
-                lastScore = copy.getGameScore();
+            if (copy.getGameScore() > bestNNScore) {
+                bestNNScore = copy.getGameScore(); // Variable to hold best score ever
                 lastChromosome.clear();
-                lastChromosome.addAll(nn.getWeights());
-                nn.mutateWeights();
-                System.out.println("Improvement, new network in trial");
+                lastChromosome.addAll(currentNN.getWeights()); // Store the full network and its score
+                currentNN.mutateWeights();
+                System.out.println("New champion found!");
             } else {
-                nn.mutateWeights();
+                currentNN.revertWeights();
+                currentNN.mutateWeights();
             }
         }
 

@@ -61,4 +61,10 @@ public class NeuronLayer {
             neuron.mutateWeights();
         }
     }
+
+    public void revertWeights() {
+        for (Neuron neuron : neurons) {
+            neuron.revertWeight();
+        }
+    }
 }

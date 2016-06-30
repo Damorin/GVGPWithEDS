@@ -78,7 +78,7 @@ public class Test
 
         // 4. This plays a single game, in N levels, M times :
         String level2 = gamesPath + games[gameIdx] + "_lvl" + 1 +".txt";
-        int M = 500;
+        int M = 5000;
         for(int i=0; i<1; i++){
         	game = gamesPath + games[gameIdx] + ".txt";
         	level1 = gamesPath + games[gameIdx] + "_lvl" + levelIdx +".txt";
